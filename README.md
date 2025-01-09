@@ -36,4 +36,4 @@ How It Works
 
 ->A counter is incremented for each vehicle that successfully crosses the line.
 
-->Results are displayed in real-time, showing the video with annotations and the total vehicle count.
+->Results are displayed in real-time, showing the video with annotations and the total vehicle count
