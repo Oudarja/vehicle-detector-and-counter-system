@@ -1,39 +1,64 @@
-This repository contains a Python-based vehicle detector and counter system that processes video footage to identify and count vehicles crossing a specified line. It leverages computer vision techniques with OpenCV to provide real-time object detection and tracking.
+# Project Title
+Vehicle Counter using OpenCV
 
-Features
-Detects moving vehicles in video streams.
-Counts vehicles as they cross a predefined line in the frame.
-Uses bounding boxes to highlight detected vehicles.
-Displays the total vehicle count in real-time.
+## Project Overview
+The Vehicle Counter project is designed to count vehicles in a video file using OpenCV. The project utilizes a background subtraction algorithm to detect moving objects (vehicles) and counts them as they cross a predefined line.
 
-Technologies Used
-Programming Language: Python
+## Features
+* Vehicle detection using background subtraction algorithm
+* Real-time vehicle counting
+* Line crossing detection
+* Display vehicle count on video feed
 
-Libraries and Frameworks
-OpenCV: Core library for computer vision tasks such as object detection, background subtraction, morphological transformations, and contour analysis.
+## File Descriptions
+### Vehicle.py
+The `Vehicle.py` script is the core of the project. It defines a `VehicleCounter` class that encapsulates the vehicle counting logic. The script uses the MOG2 background subtraction algorithm to detect moving objects in the video and counts vehicles as they cross a predefined line.
 
-Techniques and Algorithms
-1)Background Subtraction (MOG2): Used to segment moving vehicles from the static background.
-2)Grayscale Conversion: Simplifies frames to single-channel images for efficient processing.
-3)Gaussian Blur: Reduces noise in frames to improve object detection accuracy.
-4)Morphological Operations: Enhances detected regions using dilation and closing operations to refine object boundaries.
-5)Contours and Bounding Boxes: Identifies and tracks vehicles using object boundaries.
-6)Vehicle Counting Logic: Tracks vehicle positions and increments the counter when they cross the specified line.
+## Getting Started
+### Prerequisites
+* Python 3.12
+* OpenCV library
 
-How It Works
+### Installation
+To get started with the project, follow these steps:
 
-->The system reads video input using OpenCV's VideoCapture.
+1. Create a new virtual environment:
+```bash
+python -m venv venv
+```
+2. Activate the virtual environment:
+```bash
+# On Windows
+venv\Scripts\activate
 
-->Frames are preprocessed with grayscale conversion and Gaussian blur to prepare for background subtraction.
+# On Linux/Mac
+source venv/bin/activate
+```
+3. Install the required libraries:
+```bash
+pip install opencv-python
+```
+4. Clone the repository:
+```bash
+git clone https://github.com/your-username/Vehicle-Counter.git
+```
+5. Navigate to the project directory:
+```bash
+cd Vehicle-Counter
+```
 
-->Moving objects are detected using the MOG2 background subtraction algorithm.
+### Running the Project
+To run the project, simply execute the `Vehicle.py` script:
+```bash
+python Vehicle.py
+```
+This will display the video feed with the vehicle count. The count will be printed to the console and displayed on the video feed.
 
-->Morphological operations are applied to improve the quality of detected regions.
+## Usage
+To use the script, simply run `Vehicle.py` with a video file (e.g., "video.mp4") and it will display the video feed with the vehicle count.
 
-->Contours are analyzed to identify individual vehicles, and bounding boxes are drawn around them.
+Example usage:
 
-->The centroid of each detected vehicle is calculated, and tracking logic determines when it crosses the counting line.
-
-->A counter is incremented for each vehicle that successfully crosses the line.
-
-->Results are displayed in real-time, showing the video with annotations and the total vehicle count
+```bash
+python Vehicle.py
+```
