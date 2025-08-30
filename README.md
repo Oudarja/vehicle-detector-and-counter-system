@@ -16,7 +16,7 @@ The `Vehicle.py` script is the core of the project. It defines a `VehicleCounter
 
 ## Getting Started
 ### Prerequisites
-* Python 3.12
+* Python
 * OpenCV library
 
 ### Installation
